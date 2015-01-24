@@ -1,0 +1,143 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '-g', 'weather.js' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 verbose cache add [ 'weather.js', null ]
+5 verbose cache add name=undefined spec="weather.js" args=["weather.js",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'weather.js',
+6 verbose parsed url   path: 'weather.js',
+6 verbose parsed url   href: 'weather.js' }
+7 silly lockFile f33190e3-weather-js weather.js
+8 verbose lock weather.js /Users/Wtchang/.npm/f33190e3-weather-js.lock
+9 silly lockFile f33190e3-weather-js weather.js
+10 silly lockFile f33190e3-weather-js weather.js
+11 verbose addNamed [ 'weather.js', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile e55deb82-weather-js weather.js@
+14 verbose lock weather.js@ /Users/Wtchang/.npm/e55deb82-weather-js.lock
+15 silly addNameRange { name: 'weather.js', range: '*', hasData: false }
+16 verbose request where is /weather.js
+17 verbose request registry https://registry.npmjs.org/
+18 verbose request id 0bf1972ba28b6d77
+19 verbose url raw /weather.js
+20 verbose url resolving [ 'https://registry.npmjs.org/', './weather.js' ]
+21 verbose url resolved https://registry.npmjs.org/weather.js
+22 verbose request where is https://registry.npmjs.org/weather.js
+23 info trying registry request attempt 1 at 23:54:15
+24 http GET https://registry.npmjs.org/weather.js
+25 http 200 https://registry.npmjs.org/weather.js
+26 silly registry.get cb [ 200,
+26 silly registry.get   { date: 'Wed, 26 Nov 2014 04:54:16 GMT',
+26 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+26 silly registry.get     etag: '"2824GOWEZTOBKDFGN9JDFPH7P"',
+26 silly registry.get     'content-type': 'application/json',
+26 silly registry.get     'cache-control': 'max-age=60',
+26 silly registry.get     'content-length': '1475',
+26 silly registry.get     'accept-ranges': 'bytes',
+26 silly registry.get     via: '1.1 varnish',
+26 silly registry.get     age: '0',
+26 silly registry.get     'x-served-by': 'cache-jfk1031-JFK',
+26 silly registry.get     'x-cache': 'MISS',
+26 silly registry.get     'x-cache-hits': '0',
+26 silly registry.get     'x-timer': 'S1416977655.714121,VS0,VE358',
+26 silly registry.get     vary: 'Accept',
+26 silly registry.get     'keep-alive': 'timeout=10, max=50',
+26 silly registry.get     connection: 'Keep-Alive' } ]
+27 silly addNameRange number 2 { name: 'weather.js', range: '*', hasData: true }
+28 silly addNameRange versions [ 'weather.js', [ '0.0.2' ] ]
+29 verbose addNamed [ 'weather.js', '0.0.2' ]
+30 verbose addNamed [ '0.0.2', '0.0.2' ]
+31 silly lockFile 0fd25bde-weather-js-0-0-2 weather.js@0.0.2
+32 verbose lock weather.js@0.0.2 /Users/Wtchang/.npm/0fd25bde-weather-js-0-0-2.lock
+33 silly lockFile b3a1b487--weather-js-weather-js-0-0-2-tgz https://registry.npmjs.org/weather.js/-/weather.js-0.0.2.tgz
+34 verbose lock https://registry.npmjs.org/weather.js/-/weather.js-0.0.2.tgz /Users/Wtchang/.npm/b3a1b487--weather-js-weather-js-0-0-2-tgz.lock
+35 verbose addRemoteTarball [ 'https://registry.npmjs.org/weather.js/-/weather.js-0.0.2.tgz',
+35 verbose addRemoteTarball   '201c0d53c19bedfaf42f21dbd3bc957caf57389d' ]
+36 info retry fetch attempt 1 at 23:54:15
+37 verbose fetch to= /var/folders/zp/wp451xf91mn1d6vb5s_m_3gm0000gn/T/npm-1224-ti7MbyeZ/registry.npmjs.org/weather.js/-/weather.js-0.0.2.tgz
+38 http GET https://registry.npmjs.org/weather.js/-/weather.js-0.0.2.tgz
+39 http 200 https://registry.npmjs.org/weather.js/-/weather.js-0.0.2.tgz
+40 silly lockFile b3a1b487--weather-js-weather-js-0-0-2-tgz https://registry.npmjs.org/weather.js/-/weather.js-0.0.2.tgz
+41 silly lockFile b3a1b487--weather-js-weather-js-0-0-2-tgz https://registry.npmjs.org/weather.js/-/weather.js-0.0.2.tgz
+42 silly lockFile 0fd25bde-weather-js-0-0-2 weather.js@0.0.2
+43 silly lockFile 0fd25bde-weather-js-0-0-2 weather.js@0.0.2
+44 silly lockFile e55deb82-weather-js weather.js@
+45 silly lockFile e55deb82-weather-js weather.js@
+46 silly resolved [ { name: 'weather.js',
+46 silly resolved     version: '0.0.2',
+46 silly resolved     description: 'Weather.js ==========',
+46 silly resolved     homepage: 'http://weatherjs.com',
+46 silly resolved     author:
+46 silly resolved      { name: 'Noah H. Smith',
+46 silly resolved        email: 'noah@batteredoats.com',
+46 silly resolved        url: 'http://noazark.github.com/' },
+46 silly resolved     keywords: [ 'weather' ],
+46 silly resolved     engines: { node: '*' },
+46 silly resolved     repository: { type: 'git', url: 'https://github.com/noazark/weather.git' },
+46 silly resolved     bugs: { url: 'https://github.com/noazark/weather/issues' },
+46 silly resolved     licenses: [ [Object] ],
+46 silly resolved     devDependencies:
+46 silly resolved      { sugar: 'latest',
+46 silly resolved        'coffee-script': 'latest',
+46 silly resolved        'uglify-js': 'latest',
+46 silly resolved        mocha: 'latest',
+46 silly resolved        'expect.js': 'latest',
+46 silly resolved        nock: 'latest' },
+46 silly resolved     scripts: { test: 'make test' },
+46 silly resolved     readme: 'Weather.js\n==========',
+46 silly resolved     _id: 'weather.js@0.0.2',
+46 silly resolved     dist:
+46 silly resolved      { shasum: '201c0d53c19bedfaf42f21dbd3bc957caf57389d',
+46 silly resolved        tarball: 'http://registry.npmjs.org/weather.js/-/weather.js-0.0.2.tgz' },
+46 silly resolved     maintainers: [ [Object] ],
+46 silly resolved     directories: {},
+46 silly resolved     _shasum: '201c0d53c19bedfaf42f21dbd3bc957caf57389d',
+46 silly resolved     _from: 'weather.js@',
+46 silly resolved     _resolved: 'https://registry.npmjs.org/weather.js/-/weather.js-0.0.2.tgz' } ]
+47 info install weather.js@0.0.2 into /usr/local/lib
+48 info installOne weather.js@0.0.2
+49 verbose lib/node_modules/weather.js unbuild
+50 verbose tar unpack /Users/Wtchang/.npm/weather.js/0.0.2/package.tgz
+51 silly lockFile a62346e8-ocal-lib-node-modules-weather-js tar:///usr/local/lib/node_modules/weather.js
+52 verbose lock tar:///usr/local/lib/node_modules/weather.js /Users/Wtchang/.npm/a62346e8-ocal-lib-node-modules-weather-js.lock
+53 silly lockFile 91e5761b-npm-weather-js-0-0-2-package-tgz tar:///Users/Wtchang/.npm/weather.js/0.0.2/package.tgz
+54 verbose lock tar:///Users/Wtchang/.npm/weather.js/0.0.2/package.tgz /Users/Wtchang/.npm/91e5761b-npm-weather-js-0-0-2-package-tgz.lock
+55 silly gunzTarPerm modes [ '755', '644' ]
+56 error Error: EACCES, mkdir '/usr/local/lib/node_modules/weather.js'
+56 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/weather.js']
+56 error   errno: 3,
+56 error   code: 'EACCES',
+56 error   path: '/usr/local/lib/node_modules/weather.js',
+56 error   fstream_type: 'Directory',
+56 error   fstream_path: '/usr/local/lib/node_modules/weather.js',
+56 error   fstream_class: 'DirWriter',
+56 error   fstream_stack:
+56 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+56 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
+56 error      'Object.oncomplete (fs.js:107:15)' ] }
+57 error Please try running this command again as root/Administrator.
+58 error System Darwin 13.4.0
+59 error command "node" "/usr/local/bin/npm" "install" "-g" "weather.js"
+60 error cwd /Users/Wtchang/rails_projects/example_app
+61 error node -v v0.10.33
+62 error npm -v 1.4.28
+63 error path /usr/local/lib/node_modules/weather.js
+64 error fstream_path /usr/local/lib/node_modules/weather.js
+65 error fstream_type Directory
+66 error fstream_class DirWriter
+67 error code EACCES
+68 error errno 3
+69 error stack Error: EACCES, mkdir '/usr/local/lib/node_modules/weather.js'
+70 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+70 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
+70 error fstream_stack Object.oncomplete (fs.js:107:15)
+71 verbose exit [ 3, true ]
