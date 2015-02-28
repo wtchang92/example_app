@@ -8,4 +8,10 @@
       </h1>
     </section>
   </aside>
+  
+  
+  <% @user.posts.each do |post|%>
+  <%= post.title%><%= post.price%>
+  <%end%>
+ 
 </div>

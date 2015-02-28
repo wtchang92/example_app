@@ -11,15 +11,44 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141023030443) do
+ActiveRecord::Schema.define(version: 20150228214115) do
+
+  create_table "crawls", force: true do |t|
+    t.string   "title"
+    t.integer  "stops"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+  end
+
+  create_table "posts", force: true do |t|
+    t.string   "title"
+    t.decimal  "price"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "posts", ["user_id", "created_at"], name: "index_posts_on_user_id_and_created_at"
+  add_index "posts", ["user_id"], name: "index_posts_on_user_id"
+
+  create_table "tests", force: true do |t|
+    t.string   "test_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: true do |t|
     t.string   "name"
     t.string   "email"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
     t.string   "password_digest"
     t.string   "remember_digest"
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "oauth_token"
+    t.datetime "oauth_expires_at"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

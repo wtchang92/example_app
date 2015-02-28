@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
-   
+   @posts = @user.posts.all
   end
   
   def new
@@ -18,6 +18,23 @@ class UsersController < ApplicationController
       redirect_to @user
     else
       render 'new'
+    end
+  end
+
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+    respond_to do |format|
+      if @user.update(user_params)
+        format.html { redirect_to @user, notice: 'Profile setting was successfully updated.' }
+        format.json { render :show, status: :ok, location: @user }
+      else
+        format.html { render :edit }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
+      end
     end
   end
 

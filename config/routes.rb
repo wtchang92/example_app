@@ -1,5 +1,11 @@
 ExampleApp::Application.routes.draw do
 
+  resources :crawls
+
+  resources :posts
+
+  resources :tests
+
   get 'sessions/new'
 
   root             'static_pages#home'
@@ -11,6 +17,10 @@ ExampleApp::Application.routes.draw do
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
   resources :users
+  
+  match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
+match 'auth/failure', to: redirect('/'), via: [:get, :post]
+match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
