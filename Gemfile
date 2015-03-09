@@ -11,7 +11,10 @@ gem 'turbolinks',           '2.3.0'
 gem 'jbuilder',             '2.1.3'
 gem 'rails-html-sanitizer', '1.0.1'
 gem 'sdoc',                 '0.4.0', group: :doc
+gem 'devise', '~> 3.4.0'
+gem 'omniauth'
 gem 'omniauth-facebook', '~> 1.4.1'
+gem 'arel', '6.0.0.beta2'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'

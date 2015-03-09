@@ -7,20 +7,23 @@ class User < ActiveRecord::Base
                     format: { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false }
 has_secure_password
-validates :password, length: { minimum: 6 }
+#validates :password, length: { minimum: 6 }
 
 has_many :tests
 has_many :posts, dependent: :destroy
 has_many :crawls
 
 def self.from_omniauth(auth)
-    where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
+   where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.provider = auth.provider
       user.uid = auth.uid
       user.name = auth.info.name
+      user.profile_image = auth.info.image 
+      user.email = auth.info.email
+      user.nickname = auth.info.nickname
       user.oauth_token = auth.credentials.token
       user.oauth_expires_at = Time.at(auth.credentials.expires_at)
-      user.save!
+      user.save(:validate => false)
     end
   end
 

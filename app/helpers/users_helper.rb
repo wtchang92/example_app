@@ -6,4 +6,16 @@ module UsersHelper
     gravatar_url = "https://secure.gravatar.com/avatar/#{gravatar_id}"
     image_tag(gravatar_url, alt: user.name, class: "gravatar")
   end
+  def profile_image_for(user)
+    
+    if user.profile_image
+      pf_url = user.profile_image
+      image_tag(pf_url, alt: user.name, class: "gravatar")
+    else 
+      gravatar_id = Digest::MD5::hexdigest(user.email.downcase)
+      gravatar_url = "https://secure.gravatar.com/avatar/#{gravatar_id}"
+      image_tag(gravatar_url, alt: user.name, class: "gravatar")
+    end
+   
+  end
 end

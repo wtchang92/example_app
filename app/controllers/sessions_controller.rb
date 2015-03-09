@@ -1,12 +1,22 @@
 class SessionsController < ApplicationController
 
   def new
+    
   end
 
   def create
-    if User.find_by(email: params[:session][:email].downcase)
-    user = User.find_by(email: params[:session][:email].downcase)
+       
+    #if User.from_omniauth(env["omniauth.auth"])
+      
+     #  user = User.from_omniauth(env["omniauth.auth"])
+      # session[:user_id] = user.id
+       #redirect_to user
     
+    
+    
+    #else
+       user = User.find_by(email: params[:session][:email].downcase)
+        
     
         if user && user.authenticate(params[:session][:password])
           log_in user
@@ -16,20 +26,27 @@ class SessionsController < ApplicationController
           flash.now[:danger] = 'Invalid email/password combination'
           render 'new'
         end
+    #end
+   
     
-    
-    else
-       user = User.from_omniauth(env["omniauth.auth"])
-       session[:user_id] = user.id
-       redirect_to user
-    end
-    
+  end
+  
+  def omni
+    puts "88888888888"
+    puts request.env["omniauth.auth"] 
+    puts "88888888888"
+      user = User.from_omniauth(env["omniauth.auth"])
+      session[:user_id] = user.id
+      redirect_to user
     
   end
 
   def destroy
-    session[:user_id] = nil
+   
     log_out if logged_in?
-    redirect_to root_url
+   redirect_to root_url
   end
+  
+  
+  
 end
